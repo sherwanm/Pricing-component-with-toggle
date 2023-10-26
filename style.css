@@ -1,0 +1,208 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=Rubik:ital,wght@0,300;1,300&family=Tilt+Neon&display=swap');
+
+  *, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
+
+  :root{
+    --MobileDesign: 375px;
+    --DesktopDesign: 1440px;
+    --LinearGradientFrom: hsl(236, 72%, 79%) ;
+    --LinearGradientTo: hsl(237, 63%, 64%);
+    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+    --Light-Grayish-Blue: hsl(234, 14%, 74%);
+    --Grayish-Blue: hsl(233, 13%, 49%);
+    --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+    --Font-size: 15px;
+    --Font-Weight: 700;
+  }
+
+  HTML{
+    width: 100%;
+    height: 100%;
+  }
+
+  body{
+    padding: 1rem;
+    background-color: var(--Very-Light-Grayish-Blue);
+    background-image: url('images/bg-bottom.svg') , url('images/bg-top.svg');
+    background-position: left bottom, right top ;
+    background-repeat: no-repeat;
+    background-size: auto;
+    display: grid;
+    place-items: center;
+
+  }
+  input[type='checkbox']{
+    display: none;
+  }
+
+ .parent-span{
+    cursor: pointer;
+    width: 4rem;
+    height: 1rem;
+    background-image: linear-gradient(  var(--LinearGradientFrom), var(--LinearGradientTo));
+    padding: 0.2rem 1.8rem;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .am{
+    margin: 2rem;
+  }
+
+  .child-span{
+    background-color: 0;
+    margin: auto 0.1rem;
+    position: absolute;
+
+    right:0%;
+    top:0;
+    bottom: 0;
+
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  .am .text{
+    font-weight: 600;
+    margin-inline: 1.5rem;
+  }
+
+
+  .main{
+    margin: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .item1, .item2, .item3{
+    text-align: center;
+    background-color: white;
+  }
+
+  .item1, .item2, .item3{
+    padding: 1rem;
+  }
+
+  h1{
+    font-size: 4rem;
+    font-weight:bolder;
+    display: flex;
+    align-items: center;
+  }
+
+  .item1  {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  .item3  {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+
+  #dollarSign{
+    font-size: 3rem ;
+  }
+
+  .item2{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    top:-18px;
+    color: white;
+    border-radius: 10px;
+    background-image: linear-gradient(var(--LinearGradientFrom), var(--LinearGradientTo));
+  }
+
+  .item h1{
+    margin: 1rem;
+  }
+
+.item p{
+    width: 100%;
+    padding-block: 1rem;
+}
+
+
+
+#item2 .border-both,
+#item2 .border-top,
+#item2 .border-bottom{
+  border-color: azure;
+
+}
+
+
+.item .border-top{
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    opacity: 0.8;
+}
+
+.item .border-both,
+.item .border-top,
+.item .border-bottom
+{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    opacity: 0.8;
+}
+
+.item2 p{
+    border-color: white;
+}
+
+.learn-more{
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 0.8rem ;
+    width: 100%;
+    padding: 0.4rem;
+    border: none;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color:white;
+    background-image: linear-gradient(var(--LinearGradientFrom), var(--LinearGradientTo)) ;
+}
+
+#item2 .learn-more{
+  background-image: linear-gradient(white, white);
+  color: hsl(237, 61%, 64%);
+}
+
+
+@media  (max-width:775px ){
+
+  .main{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item{
+    border-radius: 0.3rem;
+    margin-block: 0.8rem;
+    border-radius: 10px;
+  }
+
+  .item2{
+    height: 100%;
+    top:0px;
+  }
+
+}
+
+
+
