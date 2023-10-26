@@ -30,7 +30,7 @@
   }
 
   body{
-    padding: 1rem;
+    padding: 2rem 1rem;
     background-color: var(--Very-Light-Grayish-Blue);
     background-image: url('images/bg-bottom.svg') , url('images/bg-top.svg');
     background-position: left bottom, right top ;
@@ -48,9 +48,10 @@
     cursor: pointer;
     width: 4rem;
     height: 1rem;
-    background-image: linear-gradient(  var(--LinearGradientFrom), var(--LinearGradientTo));
-    padding: 0.2rem 1.8rem;
-    border-radius: 10px;
+    background-color: var(--Light-Grayish-Blue);
+    background-image: linear-gradient(  #b3b5c6,  #b3b5c6);
+    padding: 0.5rem 1.8rem;
+    border-radius: 20px;
     position: relative;
   }
 
@@ -60,29 +61,34 @@
 
   .child-span{
     background-color: 0;
-    margin: auto 0.1rem;
+    margin: auto 0rem;
     position: absolute;
-
-    right:0%;
+    right: 46%;
     top:0;
     bottom: 0;
-
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.7rem;
+    height: 1.7rem;
     background-color: white;
     border-radius: 50%;
+    transition: right 100ms;
   }
 
   .am .text{
+    opacity: 0.6;
     font-weight: 600;
     margin-inline: 1.5rem;
   }
-
 
   .main{
     margin: 3rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  h2{
+    opacity: 0.7;
+    
+    font-weight: 600;
   }
 
   .item1, .item2, .item3{
@@ -91,11 +97,11 @@
   }
 
   .item1, .item2, .item3{
-    padding: 1rem;
+    padding: 1rem 2rem;
   }
 
   h1{
-    font-size: 4rem;
+    font-size: 3.3rem;
     font-weight:bolder;
     display: flex;
     align-items: center;
@@ -104,16 +110,18 @@
   .item1  {
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
+    box-shadow: -4px 4px 12px 0px hsla(234, 14%, 74%, 0.445);
   }
 
   .item3  {
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
+    box-shadow: -4px 4px 12px 0px hsla(234, 14%, 74%, 0.445);
   }
 
 
   #dollarSign{
-    font-size: 3rem ;
+    font-size: 2rem ;
   }
 
   .item2{
@@ -177,6 +185,22 @@
     color:white;
     background-image: linear-gradient(var(--LinearGradientFrom), var(--LinearGradientTo)) ;
 }
+
+.learn-more:hover{
+  background-color: white;
+  background-image: linear-gradient(white, white);
+  color:hsl(237, 61%, 64%);
+  outline: 1.5px solid hsl(237, 61%, 64%);
+}
+
+#item2 .learn-more:hover{
+  background-color: white;
+  background-image: linear-gradient(var(--LinearGradientFrom), var(--LinearGradientTo)) ;
+  color:white;
+  outline: 1.5px solid white;
+}
+
+
 
 #item2 .learn-more{
   background-image: linear-gradient(white, white);
